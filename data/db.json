@@ -1,0 +1,27 @@
+{
+    "users": [{
+            "nom": "Diallo",
+            "prenom": "El hadji",
+            "login": "Satoru@admin.com",
+            "password": "admin",
+            "role": "ROLE_ADMIN",
+            "score": 0
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        }
+    ]
+}
