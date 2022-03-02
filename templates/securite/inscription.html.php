@@ -1,3 +1,7 @@
+<?php
+$_POST['prenom'];
+
+?>
 <link rel="stylesheet" href="<?= WEB_PUBLIC."css".DIRECTORY_SEPARATOR."style.inscription.css" ?>">
 
 <section class="content-sign-in">
@@ -5,8 +9,8 @@
     <div class="check-info" id="check-info">
         <!-- // ! libele -->
         <div class="libele-form">
-            <h2>S'inscrire</h2>
-            <small>pour proposer des quizz</small>
+            <h2>Inscription</h2>
+            <!-- <small>pour proposer des quizz</small> -->
         </div>
         <!-- // ! the form -->
         <form class="connexion-form-inscrip" id="connexion-form" action="<?= WEB_ROOT?>" method="POST">
@@ -85,12 +89,12 @@
         </form>
     </div>
     <!-- // todo choose your avatar -->
-    <div class="choose-avatar" id="choose-avatar">
+    <!-- <div class="choose-avatar" id="choose-avatar">
         <figure>
             <img src="<?= '' ?>" alt="avatar joueur" srcset="">
             <figcaption>avatar joueur</figcaption>
         </figure>
-    </div>
+    </div> -->
 
 
 </section>

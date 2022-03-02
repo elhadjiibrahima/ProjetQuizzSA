@@ -35,14 +35,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--color-of-whitesmoke);
+    align-items: center;
+    /* background-color: var(--color-of-whitesmoke); */
 }
 
 .forms-group {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 80%;
     color: var(--color-of-gray);
+    background-color: white;
     border: 1px solid var(--color-of-gray);
     margin: 2.5%;
     height: 75px;

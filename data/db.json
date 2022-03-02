@@ -22,6 +22,70 @@
             "password": "joueur",
             "role": "ROLE_JOUEUR",
             "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
+        },
+        {
+            "nom": "Diallo",
+            "prenom": "Elhadji",
+            "login": "Gojo@joueur.com",
+            "password": "joueur",
+            "role": "ROLE_JOUEUR",
+            "score": 10
         }
     ]
 }

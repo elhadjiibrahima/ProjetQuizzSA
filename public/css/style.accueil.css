@@ -1,0 +1,32 @@
+.container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+.bord{
+    width: 35%;
+    height: 60vh;
+    margin-top: 5%;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border: solid;
+}
+.avatar{
+    background-color: aquamarine;
+    height: 20vh;
+    width: 100%;
+    border: solid;
+}
+.tb{
+    height: 40vh;
+    font-size: 1.5em;
+    display:flex ;
+    flex-direction: column;
+}
+.lab{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+    color: black;
+}

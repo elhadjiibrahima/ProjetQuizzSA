@@ -1,14 +1,21 @@
 .content-sign-in {
     display: flex;
-    width: 60%;
-    background-color: red;
+    width: 100%;
+    margin-top: 10%;
+    /* height: 90vh; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .check-info {
     flex: 2;
+    width: 40%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .choose-avatar {
@@ -30,9 +37,14 @@
 
 .connexion-form-inscrip {
     padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 .libele-form {
+    width: 100%;
     background-color: var(--color-of-blue);
     height: 75px;
     display: flex;
@@ -45,7 +57,7 @@
 }
 
 .control-group {
-    height: 90%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,9 +82,10 @@
 .label-connexion {
     min-width: 20%;
     min-height: 100%;
+    color: black;
     display: flex;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     cursor: pointer;
 }
@@ -98,7 +111,7 @@
     height: 80%;
     font-size: 1.5em;
     font-weight: bold;
-    color: var(--color-of-gray);
+    /* color: var(--color-of-gray); */
     margin: 1% 0;
 }
 
@@ -106,7 +119,7 @@
     margin: 2.5%;
     display: flex;
     align-items: center;
-    color: var(--color-of-gray);
+    /* color: var(--color-of-gray); */
     font-size: 2em;
 }
 

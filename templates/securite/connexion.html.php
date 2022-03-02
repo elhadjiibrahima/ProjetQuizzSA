@@ -25,7 +25,7 @@ if(isset($_SESSION[KEY_ERRORS])){
             <div class="forms-group">
                 <!-- <Label class="label-connexion" for="login"></Label> -->
                 <input class="input-connexion" type="text"  name="login" id="login" class="login" placeholder="login">
-                <!-- <small class="ic-connexion"><img src="<WEB_PUBLIC."img".DIRECTORY_SEPARATOR."icone".DIRECTORY_SEPARATOR."ic-login.png"?>" alt=""></small> -->
+                <small class="ic-connexion"><img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."icone".DIRECTORY_SEPARATOR."ic-login.png"?>" alt=""></small> 
             </div>
             <?php /* gestion des erreurs */ if (isset($errors['login'])):?>
                 <small class="ERROR-LAY RED-ERROR"><?= $errors['login'] ?></small>
@@ -35,7 +35,7 @@ if(isset($_SESSION[KEY_ERRORS])){
             <div class="forms-group">
                 <!-- <Label class="label-connexion" for="password" >Passwor</Label> -->
                 <input class="input-connexion" type="password"  name="password" id="password" class="password" placeholder="password">
-                <!-- <small class="ic-connexion"><img src="<WEB_PUBLIC."img".DIRECTORY_SEPARATOR."icone".DIRECTORY_SEPARATOR."ic-login.png" >" alt=""></small> -->
+                <small class="ic-connexion"><img src="<?=WEB_PUBLIC."img".DIRECTORY_SEPARATOR."icone".DIRECTORY_SEPARATOR."ic-password.png" ?>" alt=""></small>
             </div>
             <?php /* todogestion des erreurs */  if (isset($errors['password'])):?>
                 <small class="ERROR-LAY RED-ERROR"><?= $errors['password'] ?></small>
