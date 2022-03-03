@@ -8,16 +8,17 @@
             <?php endif; ?>
 
 
-            <?php /* liste des joueurs */ if(is_admin()):?>
-                <li id="liste-joueur"><a href="<?=WEB_ROOT."?controller=user&action=liste.joueur"?>"></a></li>
-            <?php endif; ?>
-            
+            <?php /* liste des joueurs */ if(is_admin() ):?>
+                <li id="liste-joueur">
+                    <a href="<?=WEB_ROOT."?controller=user&action=liste.joueur"?>"></a>
+                </li>
+                <?php endif; ?>    
             <?php /* inscription */ if(!is_connect()):?>
                 <li id="sign-in"><a href="<?=WEB_ROOT."?controller=securite&action=inscription" ?>"></a></li>
             <?php endif; ?>
 
 
-            <?php /* deconnexion */ if(is_connect()):?>
+            <?php /* deconnexion */ if(is_connect() && is_player()  ):?>
                 <li id="log-out"><a href="<?=WEB_ROOT."?controller=securite&action=deconnexion"?>">Déconnexion</a></li>
             <?php endif; ?>                
         </ul>

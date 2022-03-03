@@ -1,0 +1,15 @@
+
+.table-joueurs{
+    /* margin-top: 13% ; */
+    /* margin-left: 40%; */
+    position: absolute;
+    float:right;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aqua;
+}
+th,td{
+    border: solid;
+}

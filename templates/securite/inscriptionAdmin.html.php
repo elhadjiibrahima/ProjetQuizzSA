@@ -55,8 +55,8 @@
                     <Label class="label-connexion" for="file">Avatar</Label>
                     <input class="input-sign-in" type="file" name="file" id="file" placeholder="Choississez votre avatar">
                 </div>
-                <div class="last-control">
-                    <button id="connect" type="submit">S'inscrire</button>
+                <div class="las-control">
+                    <button id="connec" type="submit"> <a href="<?= WEB_ROOT."?controller=securite&action=inscriptionAdmin"?>">S'inscrire</a> </button>
                 </div>
             </div>
         </form>

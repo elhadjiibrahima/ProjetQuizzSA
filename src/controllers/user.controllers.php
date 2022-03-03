@@ -39,7 +39,10 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
             }
         }elseif($_REQUEST['action']=="liste.joueur"){
             lister_joueur();
-        }else{
+        }elseif($_REQUEST['action']=="liste.question"){
+            lister_question();
+        }
+        else{
             echo "cette page n'existe pas";
 
         }
@@ -55,7 +58,16 @@ function lister_joueur(){
     ob_start();
     $tab_joueurs = find_users_by_role(ROLE_JOUEUR);
     require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.joueur.html.php");   
-    $content_for_views=ob_get_clean();
+    $content_for_liste=ob_get_clean();
+    require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
+}
+
+function lister_question(){
+    // Appel du model pour chercher les joueurs
+    ob_start();
+    $tab_joueurs = find_users_by_role(ROLE_JOUEUR);
+    require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.question.html.php");   
+    $content_for_liste=ob_get_clean();
     require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
 }
 

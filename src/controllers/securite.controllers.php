@@ -50,6 +50,9 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
         }elseif($_REQUEST['action']=="inscription"){
             presentation_inscription();
         }
+        elseif($_REQUEST['action']=="inscriptionAdmin"){
+            presentation_inscriptionAdmin();
+        }
     }else{
         presentation_connexion();
     }
@@ -70,20 +73,19 @@ function connexion(string $login,string $password):void{
         valid_email("login",$login,$errors);
     }
 
-    // todo vérification password
-    champ_obligatoire("password",$password,$errors,'Mot de passe obligatoire');
-    if(!isset($errors['login'])){
-        valid_password("password",$password,$errors);
-    }
+// todo vérification password
+champ_obligatoire("password",$password,$errors,'Mot de passe obligatoire');
+if(!isset($errors['login'])){
+    valid_password("password",$password,$errors);
+}
 
 
 
-    if(count($errors)==0){
-        // todo contraintes de validation front réussie
-        // Appel d'une fonction du models
-        $user=find_user_login_password($login,$password);
-        if(count($user)!=0){
-            // existence de l'utilisateur
+if(count($errors)==0){
+    // todo contraintes de validation front réussie
+    // Appel d'une fonction du models
+    $user=find_user_login_password($login,$password);
+    if(count($user)!=0){
             $_SESSION[KEY_USER_CONNECT]=$user;
             header('location:'.WEB_ROOT.'?controller=user&action=accueil');
             exit();
@@ -138,6 +140,13 @@ function inscription_jeu(){
     $content_for_views=ob_get_clean();
     require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
 }
+function inscription_jeuAdmin(){
+    ob_start();
+    require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."inscription.html.php");   
+    $content_for_liste=ob_get_clean();
+    require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
+}
+
 
 
 // !fonction presenter le jeu
@@ -151,5 +160,12 @@ function presentation_inscription(){
     ob_start();
     require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."inscription.html.php");   
     $content_for_views=ob_get_clean();
+    require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
+}
+
+function presentation_inscriptionAdmin(){
+    ob_start();
+    require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."inscriptionAdmin.html.php");   
+    $content_for_liste=ob_get_clean();
     require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
 }

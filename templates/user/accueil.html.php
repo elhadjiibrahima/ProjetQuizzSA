@@ -21,8 +21,91 @@ if(isset($content_for_views)){
 **** 
 *****/
 ?>
-    
+    <?php if(is_connect() && is_admin()):?>
+        <!-- <div class="accueil_admin">
+        <div class="container">
+        <div class="menuu">
+             
+            </div>
+    <div class="contain">
+        <div class="contener">
+         
+          </div>
+        <div class="bord">
+            <div class="avatar"><img src="<?=WEB_ROOT."/img/Mimo.jpg"?>">
+                                             <h2>Mme <br>Balde </h2>
+        </div>
+            <div class="tb">
+                <div class="lab">
+                    <label for=""><a href="<?=WEB_ROOT."?controller=user&action=liste.question"?>"> Liste  Question</a></label>
+                    <img src="<?=WEB_ROOT."/img/icone/ic-liste-active.png"?>" alt="">
+                </div>
+                <div class="lab">
+                    <label for=""><a href="<?=WEB_ROOT."?controller=user&action=liste.joueur"?>">Liste Joueur</a></label>
+                    <img src="<?=WEB_ROOT."/img/icone/ic-liste.png"?>" alt="">
+                </div>
+                <div class="lab">
+                    <label for=""><a href="#">creer Questions</a></label>
+                    <img src="<?=WEB_ROOT."/img/icone/ic-ajout.png"?>" alt="">
+                </div>
+                <div class="lab">
+                    <label for=""><a href="#"> Creer admin</a></label>
+                    <img src="<?=WEB_ROOT."/img/icone/ic-ajout.png"?>" alt="">
+                </div>
+            </div>
+           </div>
+        </div>
+        <div class="conten">
+                <h2 style="color: black;">Hello</h2>
+                </div>
+     </div> 
+     </div> 
+ </div> -->
+ <div class="accueil_admin">
+     <div class="cc">
+     <div class="menuu">
+         <h1>Creer et Parametrer vos Quizz</h1>
+          <div class="logout">
+            <?php /* deconnexion */ if(is_connect()  ):?>
+                <h3 id="log-out"><a href="<?=WEB_ROOT."?controller=securite&action=deconnexion"?>">Déconnexion</a></h3>
+            <?php endif; ?> 
+     </div>
+     </div>
+     <div class="container">
+        <div class="bord">
+            <div class="avatar"><img src="<?=WEB_ROOT."/img/Mimo.jpg"?>">
+                                             <h2>Mme <br>Balde </h2>
+            </div>
+            <div class="tb">
+                <div class="lab">
+                    <label for=""><a href="<?=WEB_ROOT."?controller=user&action=liste.question"?>"> Liste  Question</a></label>
+                    <img src="<?=WEB_ROOT."/img/icone/ic-liste-active.png"?>" alt="">
+                </div>
+                <div class="lab">
+                    <label for=""><a href="<?=WEB_ROOT."?controller=user&action=liste.joueur"?>">Liste Joueur</a></label>
+                    <img src="<?=WEB_ROOT."/img/icone/ic-liste.png"?>" alt="">
+                </div>
+                <div class="lab">
+                    <label for=""><a href="#">creer Questions</a></label>
+                    <img src="<?=WEB_ROOT."/img/icone/ic-ajout.png"?>" alt="">
+                </div>
+                <div class="lab">
+                    <label for=""><a href="<?= WEB_ROOT."?controller=securite&action=inscriptionAdmin" ?>"> Creer admin</a></label>
+                    <img src="<?=WEB_ROOT."/img/icone/ic-ajout.png"?>" alt="">
+                </div>
+            </div>
 
+        </div>
+        
+        <div class="conten">
+        <?php if(isset($content_for_liste)){
+            echo $content_for_liste;
+        }  ?>
+        </div>
+     </div>
+ </div>
+
+    <?php endif ?>
 <?php
 //! footer of html
 require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.inc.html.php");

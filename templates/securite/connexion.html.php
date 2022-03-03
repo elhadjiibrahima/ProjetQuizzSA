@@ -8,6 +8,7 @@ if(isset($_SESSION[KEY_ERRORS])){
 }
 
 ?>
+
 <section class="content-form">
     <form class="connexion-form" id="connexion-form" action="<?= WEB_ROOT ?>" method="POST">
         <input type="hidden" name="controller" value="securite">
@@ -25,6 +26,7 @@ if(isset($_SESSION[KEY_ERRORS])){
             <div class="forms-group">
                 <!-- <Label class="label-connexion" for="login"></Label> -->
                 <input class="input-connexion" type="text"  name="login" id="login" class="login" placeholder="login">
+                <small id="small">ok</small>
                 <!-- <small class="ic-connexion"><img src="<WEB_PUBLIC."img".DIRECTORY_SEPARATOR."icone".DIRECTORY_SEPARATOR."ic-login.png"?>" alt=""></small> -->
             </div>
             <?php /* gestion des erreurs */ if (isset($errors['login'])):?>
@@ -43,8 +45,8 @@ if(isset($_SESSION[KEY_ERRORS])){
 
             <!-- //!press on submit button -->
             <div class="last-control">
-                <button id="connect" type="submit" na>Connexion</button>
-                <a href="<?= WEB_ROOT."?controller=securite&action=inscription" ?>">S'inscrire pour jouer </a>
+                <button id="connect" type="submit" onclick="checkEmail()" na >Connexion</button>
+                <a href="<?= WEB_ROOT."?controller=securite&action=inscription" ?>">S'inscrire pour jouer</a>
             </div>
         </div>        
     </form>
