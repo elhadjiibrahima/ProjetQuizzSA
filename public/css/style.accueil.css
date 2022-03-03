@@ -70,6 +70,10 @@
     height: 100px;
     border-radius: 50%;
 }
+#small_login,#small_password{
+    display: none;
+    color: red;
+}
 .tb{
     height: 40vh;
     font-size: 1.5em;

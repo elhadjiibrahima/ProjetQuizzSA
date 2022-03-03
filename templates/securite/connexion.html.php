@@ -10,7 +10,7 @@ if(isset($_SESSION[KEY_ERRORS])){
 ?>
 
 <section class="content-form">
-    <form class="connexion-form" id="connexion-form" action="<?= WEB_ROOT ?>" method="POST">
+    <form class="connexion-form" id="connexion-form"  name="form" action="<?= WEB_ROOT ?>" method="POST">
         <input type="hidden" name="controller" value="securite">
         <input type="hidden" name="action" value="connexion">
         <div class="libele-form">
@@ -26,7 +26,7 @@ if(isset($_SESSION[KEY_ERRORS])){
             <div class="forms-group">
                 <!-- <Label class="label-connexion" for="login"></Label> -->
                 <input class="input-connexion" type="text"  name="login" id="login" class="login" placeholder="login">
-                <small id="small">ok</small>
+                <small id="small_login">Erreur login</small>
                 <!-- <small class="ic-connexion"><img src="<WEB_PUBLIC."img".DIRECTORY_SEPARATOR."icone".DIRECTORY_SEPARATOR."ic-login.png"?>" alt=""></small> -->
             </div>
             <?php /* gestion des erreurs */ if (isset($errors['login'])):?>
@@ -38,6 +38,7 @@ if(isset($_SESSION[KEY_ERRORS])){
                 <!-- <Label class="label-connexion" for="password" >Passwor</Label> -->
                 <input class="input-connexion" type="password"  name="password" id="password" class="password" placeholder="password">
                 <!-- <small class="ic-connexion"><img src="<WEB_PUBLIC."img".DIRECTORY_SEPARATOR."icone".DIRECTORY_SEPARATOR."ic-login.png" >" alt=""></small> -->
+               <small id="small_password">Error password</small>
             </div>
             <?php /* todogestion des erreurs */  if (isset($errors['password'])):?>
                 <small class="ERROR-LAY RED-ERROR"><?= $errors['password'] ?></small>

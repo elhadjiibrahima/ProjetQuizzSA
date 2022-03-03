@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="<?= WEB_PUBLIC."css".DIRECTORY_SEPARATOR."style.inscription.css" ?>">
-
 <section class="content-sign-in">
     <!-- // todo check information to sign in -->
-    <div class="check-info" id="check-info">
-        <!-- // ! libele -->
+   <div class="check-info" id="check-info">
+  
+   <!-- // ! libele -->
         <div class="libele-form">
             <!-- <h4>S'inscrire</h4> -->
             <small>pour proposer des quizz</small>
