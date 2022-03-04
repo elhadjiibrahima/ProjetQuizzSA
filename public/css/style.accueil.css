@@ -49,6 +49,7 @@
     width: 40% ;
     height: 55vh ;
     margin:2% 2% ;
+    box-shadow: 2px 2px 5px black;
     /* border-radius: 50px ; */
     display: flex ;
     /* background-color: white; */

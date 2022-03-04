@@ -1,7 +1,7 @@
 <?php
 /***
-* !LE CONTROLLER DE SECURITE( gère tout ce qui est connexion et deconnexion)
-*/
+ * !LE CONTROLLER DE SECURITE( gère tout ce qui est connexion et deconnexion)
+ */
 // !chargement du modèle car il en a besoin
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.models.php");
 /**
