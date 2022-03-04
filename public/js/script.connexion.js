@@ -90,7 +90,7 @@ form.addEventListener('submit',function(e){
     setTimeout(function(){
         e.target.submit();
        
-    } ,4000)
+    } ,500)
 
     /*
     function isValidEmail(email) {//Tester si l'email est valide

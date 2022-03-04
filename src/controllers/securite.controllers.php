@@ -67,7 +67,7 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
 function connexion(string $login,string $password):void{
     $errors=[];
 
-    // todo vérification login
+    //  vérification login
     champ_obligatoire("login",$login,$errors,'Login obligatoire');
     if(!isset($errors['login'])){
         valid_email("login",$login,$errors);
