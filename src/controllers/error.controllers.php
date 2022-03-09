@@ -2,20 +2,17 @@
                 <?php   if (isset($errors['inscription'])):?>
                      <small class="ERROR-LAY RED-ERROR"><?= $errors['inscription'] ?></small>
                 <?php endif; ?>
-                <div class="forms-group-inscrip">
-                    <Label class="label-connexion" for="prenom">Prénom</Label>
-                    <input class="input-sign-in" type="text"  name="prenom" id="prenom" class="login" placeholder="entrez votre prenom">
-                    <?php  if (isset($errors['prenom'])):?>
+               .
                         <small class="ERROR-LAY RED-ERROR"><?= $errors['prenom'] ?></small>
                         <?php endif; ?>
                     </div>
 
 
                 <!--//! nom -->
-                <div class="forms-group-inscrip">
+                <!-- <div class="forms-group-inscrip">
                     <Label class="label-connexion" for="nom">Nom</Label>
                     <input class="input-sign-in" type="text"  name="nom" id="nom" class="login" placeholder="entrez votre prenom">
-                </div>
+                </div> -->
                 <?php /* gestion des erreurs */ if (isset($errors['nom'])):?>
                     <small class="ERROR-LAY RED-ERROR"><?= $errors['nom'] ?></small>
                 <?php endif; ?>
