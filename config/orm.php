@@ -12,11 +12,15 @@ function json_to_array(string $key):array{
 }
 
 //! Enregistrement et Mis à jour des donnees du fichier avec la fonction array_to_json (save_data)
-function array_to_json(string $key,array $dataArray):void{
-    // travail de l'ORM
-    $dataArray[$key];
-    $dataJson=json_encode($dataArray);
+function array_to_json(array $dataArray,string $key){
+    
+
+    $dataJson=file_get_contents(PATH_DB);
+    $dataArrayDecode=json_decode($dataJson,true);
+    $dataArrayDecode[$key][]=$dataArray;
+    $dataJson=json_encode($dataArrayDecode);
     file_put_contents(PATH_DB,$dataJson);
 }
+
 
 

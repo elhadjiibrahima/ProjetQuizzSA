@@ -2,7 +2,7 @@
 /***
  * !LE CONTROLLER DE SECURITE( gère tout ce qui est connexion et deconnexion)
  */
-// !chargement du modèle car il en a besoin
+//???????????||||||||\\\\\\chargement du modèle car il en a besoin
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.models.php");
 /**
 *!Traitement des Requetes POST
@@ -22,18 +22,47 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
                 $password2=$_POST['password2'];
                 $file=$_POST['file'];
                 if(!is_valid_inscription()){
-                    header("location: ".WEB_ROOT."?controller=securite&action=inscription" );
+                    header("location: ".WEB_ROOT."?controller=securite&action=connexion" );
                     exit();
                 }
+                
                 sign_in($prenom,$nom,$login,$password1,$password2,$file);
-                // inscription_jeu();                    
+                inscription_jeu();                    
+            }
+        }elseif($_REQUEST['action']=="inscriptionAdmin"){
+            if(isset($_POST)){
+                $prenom=$_POST['prenom'];
+                $nom=$_POST['nom'];
+                $login=$_POST['login'];
+                $password=$_POST['password'];
+                $password2=$_POST['password2'];
+                $file=$_POST['file'];
+                if(!is_valid_inscription()){
+                    presentation_inscriptionAdmin();
+                    header("location: ".WEB_ROOT."?controller=user&action=accueil" );
+                    exit();
+                }
+                
+                // sign_in($prenom,$nom,$login,$password,$password2,$file);
+                inscription_jeu();                    
             }
         }
     }
 }
 
 
-
+function collectInfos(array &$infos_new_user,string $role=ROLE_JOUEUR):array{
+    $infos_new_user=[];
+    $infos_new_user["nom"]=nettoyer_chaine($_POST['nom']);
+    $infos_new_user["prenom"]=nettoyer_chaine($_POST['prenom']);
+    $infos_new_user["login"]=nettoyer_chaine($_POST['login']);
+    $infos_new_user["password1"]=nettoyer_chaine($_POST['password1']);
+    $infos_new_user["password2"]=nettoyer_chaine($_POST['password2']);
+    $infos_new_user["role"]=$role;
+    $infos_new_user["score"]=0;
+    $infos_new_user["avatar"]=(!empty($_FILES['fileUpload']['name']))? $_FILES['fileUpload']["name"]:'default_avatar';
+    return $infos_new_user;
+}
 /**
 *!Traitement des Requetes GET
     *click sur un lien qui a été définie par le programmeur
@@ -51,7 +80,9 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
             presentation_inscription();
         }
         elseif($_REQUEST['action']=="inscriptionAdmin"){
-            presentation_inscriptionAdmin();
+            presentation_inscriptionAdmin();  
+        } elseif($_REQUEST['action']=="creerquestion"){
+            creer_question();  
         }
     }else{
         presentation_connexion();
@@ -129,8 +160,7 @@ function sign_in(string $prenom, string $nom,string $login, string $password1, s
 }
 
 function save_a_new_user(){
-   
-
+       
 }
 
 // !fonction presenter le jeu
@@ -169,3 +199,17 @@ function presentation_inscriptionAdmin(){
     $content_for_liste=ob_get_clean();
     require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
 }
+
+function creer_question(){
+    ob_start();
+    require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."Creerdesquestions.html.php");   
+    $content_for_liste=ob_get_clean();
+    require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
+}
+
+
+
+
+########################################################################
+#########################################################################
+######################################################################
