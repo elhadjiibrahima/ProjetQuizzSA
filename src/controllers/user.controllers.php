@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 * ! Traitement des Requetes GET
     *click sur un lien qui a été définie par le programmeur
     *renseigner sur l'url
-    *redirection qui  charge une vue
+    *redirection qui  charge une v
 */
 if($_SERVER['REQUEST_METHOD']=="GET"){
     if(isset($_REQUEST['action'])){

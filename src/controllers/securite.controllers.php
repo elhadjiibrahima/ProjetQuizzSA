@@ -114,7 +114,6 @@ if(!isset($errors['login'])){
 
 if(count($errors)==0){
     // todo contraintes de validation front réussie
-    // Appel d'une fonction du models
     $user=find_user_login_password($login,$password);
     if(count($user)!=0){
             $_SESSION[KEY_USER_CONNECT]=$user;
